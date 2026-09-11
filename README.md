@@ -1,7 +1,7 @@
 # <p align="center"> <img width="34" height="38" alt="Padlock" src="https://github.com/user-attachments/assets/bc9aaa5f-d088-40dc-8ff8-814e4bb62f82" /> Cybersecurity Lab Envirnment Setup </p>
 
 # 1. Project Overview
-https://img.shields.io/badge/%20padlock%25-orange
+<img https://img.shields.io/badge/%20padlock%25-orange />
    
 This Cybersecurity Lab Setup project focuses on building a safe, isolated, and virtualized environment to simulate cyberattacks, analyze malware, perform vulnerability assessment and test defensive security controls.
 
