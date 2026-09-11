@@ -48,7 +48,7 @@ VirtualBox was downloaded and installed as the hypervisor.
 * Network Address used: IPv4 Prefix: 10.0.0.0/24
 <img width="994" height="720" alt="Nat" src="https://github.com/user-attachments/assets/452faa65-cb44-4105-b7ff-50b53ab89592" />
 
-
+A # NAT Network was selected b
 
 
 
