@@ -48,10 +48,20 @@ VirtualBox was downloaded and installed as the hypervisor.
 * Network Address used: IPv4 Prefix: 10.0.0.0/24
 <img width="994" height="720" alt="Nat" src="https://github.com/user-attachments/assets/452faa65-cb44-4105-b7ff-50b53ab89592" />
 
-A # NAT Network was selected b
+A **NAT Network** was selected because it is used to create an isolated private network for multiple virtual machines (VMs) that also needd internet access and communicate with one another
+It will allow future attacker and ttarget VMs to communicate within the Lab.
 
+# <sub> Step 4. Import Kali Linus Software
+The Kali Linux virtual was downloaded from their official website and imported into VirtualBox.
 
-
+The VM network adapter was configure as follows:
+	Adapter 1
+	Attached to: Nat Network
+	Network: NatNetwork
+	Adapter type: Intel PRO/1000 MT Desktop
+	
+The RAM allocated for the VM was 4086 MB 
+<img width="771" height="669" alt="kali" src="https://github.com/user-attachments/assets/d6ce3955-da3b-4a0d-9f7a-2bd738bfb358" />
 
 
 
