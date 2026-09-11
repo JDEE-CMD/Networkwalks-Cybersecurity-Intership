@@ -17,23 +17,19 @@ The main objectives of this project are to:
 * Document the complete setup process.
 * Prepare the environment for future cybersecurity projects.
 
-# 3. Purpose of the Lab
-
+# 3. Purpose of the La
 The lab provides an isolated and controlled environment for cybersecurity learning and authorized security testing.
-
 It can be used for activities such as:
+* Network reconnaissance
+* Port scanning
+* Vulnerability assessment
+* Packet analysis
+* Web security testing
+* Exploitation practice
+* Security-tool experimentation
 
-Network reconnaissance
-Port scanning
-Vulnerability assessment
-Packet analysis
-Web security testing
-Exploitation practice
-Security-tool experimentation
-
-4. Lab Setup Procedure
-
-Step 1.	Download and Install 7-Zip
+# 4. Lab Setup Procedure
+## Step 1.	Download and Install 7-Zip
 	7-Zip was installed to extract the Kali Linux virtual-machine package, which may be distributed as a .7z archive
 Tool:	7-Zip
 
