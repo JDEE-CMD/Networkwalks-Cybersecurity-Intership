@@ -1,14 +1,11 @@
 # <p align="center"> <img width="34" height="38" alt="Padlock" src="https://github.com/user-attachments/assets/bc9aaa5f-d088-40dc-8ff8-814e4bb62f82" /> Cybersecurity Lab Envirnment Setup </p>
 
 # 1. Project Overview
-
 This Cybersecurity Lab Setup project focuses on building a safe, isolated, and virtualized environment to simulate cyberattacks, analyze malware, perform vulnerability assessment and test defensive security controls.
 
 The lab is setup and configured on a Private Virtual Network so that additional machines can be added later and used as targets for authorized security testing.
 
-
 # 2. Project Objectives
-
 The main objectives of this project are to:
 
 * Installation and configuration of VirtualBox
