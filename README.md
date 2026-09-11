@@ -61,11 +61,13 @@ The VM network adapter was configure as follows:
 	Attached to: Nat Network
 	Network: NatNetwork
 	Adapter type: Intel PRO/1000 MT Desktop
+	
 	'''
 	
 '''
 
 The RAM allocated for the VM was 4086 MB
+
 '''
 <img width="771" height="669" alt="kali" src="https://github.com/user-attachments/assets/d6ce3955-da3b-4a0d-9f7a-2bd738bfb358" />
 
