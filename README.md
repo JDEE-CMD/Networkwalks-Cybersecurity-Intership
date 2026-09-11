@@ -7,7 +7,6 @@ The lab is setup and configured on a Private Virtual Network so that additional 
 
 # 2. Project Objectives
 The main objectives of this project are to:
-
 * Installation and configuration of VirtualBox
 * Install/import Kali Linux as a virtual machine.
 * Create a private NAT Network for the cybersecurity lab.
