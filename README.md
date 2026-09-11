@@ -30,14 +30,13 @@ It can be used for activities such as:
 * Security-tool experimentation
 
 # 4. Lab Setup Procedure
-## Step 1.	Download and Install 7-Zip
+# Step 1.	Download and Install 7-Zip
 	7-Zip was installed to extract the Kali Linux virtual-machine package, which may be distributed as a .7z archive
 Tool:	7-Zip
-
-Step 2.	Download and Install VirtualBox
+# Step 2.	Download and Install VirtualBox
 	VirtualBox was downloaded and installed as the hypervisor.
-
-Step 3.	Create the Nat Network
+# Step 3.	Create the Nat Network
 	A dedicated Nat Network was created in VirtualBox
+	
 	The configuration is shown in the picture below.
 	IPv4 Prefix: 10.0.0.0/24
