@@ -55,10 +55,10 @@ It will allow future attacker and ttarget VMs to communicate within the Lab.
 The Kali Linux virtual was downloaded from their official website and imported into VirtualBox.
 
 The VM network adapter was configure as follows:
-	Adapter 1
+	(Adapter 1
 	Attached to: Nat Network
 	Network: NatNetwork
-	Adapter type: Intel PRO/1000 MT Desktop
+	Adapter type: Intel PRO/1000 MT Desktop)
 	
 The RAM allocated for the VM was 4086 MB 
 <img width="771" height="669" alt="kali" src="https://github.com/user-attachments/assets/d6ce3955-da3b-4a0d-9f7a-2bd738bfb358" />
