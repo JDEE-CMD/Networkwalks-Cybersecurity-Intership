@@ -55,6 +55,7 @@ It will allow future attacker and ttarget VMs to communicate within the Lab.
 The Kali Linux virtual was downloaded from their official website and imported into VirtualBox.
 
 The VM network adapter was configure as follows:
+
 	'''text
 	Adapter 1
 	Attached to: Nat Network
