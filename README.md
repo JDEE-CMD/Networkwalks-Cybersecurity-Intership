@@ -34,6 +34,7 @@ It can be used for activities such as:
 	7-Zip was installed to extract the Kali Linux virtual-machine package, which may be distributed as a .7z archive
 	Tool:	7-Zip
 <img width="420" height="300" alt="7-Zip" src="https://github.com/user-attachments/assets/12b420e4-69e0-4185-91ba-3214d557eaa6" />
+
 # <sub> Step 2.	Download and Install VirtualBox
 	VirtualBox was downloaded and installed as the hypervisor.
 	
