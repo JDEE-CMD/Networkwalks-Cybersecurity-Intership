@@ -1,4 +1,4 @@
-#  <img width="34" height="38" alt="Padlock" src="https://github.com/user-attachments/assets/bc9aaa5f-d088-40dc-8ff8-814e4bb62f82" /> Cybersecurity Lab Envirnment Setup </p>
+# <p align="center"> <img width="34" height="38" alt="Padlock" src="https://github.com/user-attachments/assets/bc9aaa5f-d088-40dc-8ff8-814e4bb62f82" /> Cybersecurity Lab Envirnment Setup </p>
 
 # 1. Project Overview
    
