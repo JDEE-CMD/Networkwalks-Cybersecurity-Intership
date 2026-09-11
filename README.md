@@ -17,7 +17,7 @@ The main objectives of this project are to:
 * Document the complete setup process.
 * Prepare the environment for future cybersecurity projects.
 
-# 3. Purpose of the La
+# 3. Purpose of the Lab
 The lab provides an isolated and controlled environment for cybersecurity learning and authorized security testing.
 It can be used for activities such as:
 * Network reconnaissance
