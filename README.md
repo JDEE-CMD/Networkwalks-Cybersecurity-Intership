@@ -157,7 +157,7 @@ Kali Linux: https://kali.org/get-kali
 
 Cybersecurity Starter
 
-LinkedIn: https://www.linkedin.com/in/joel-oludayo-koleosho/
+LinkedIn: https://www.linkedin.com/in/joel-oludayo-koleosho-458a95162/
 
 # Project Imformation
 
