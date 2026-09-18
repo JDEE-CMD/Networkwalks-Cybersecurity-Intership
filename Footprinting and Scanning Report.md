@@ -1,10 +1,6 @@
 # <p align="center">PENETRATION TESTING REPORT</p>
-  <center>
-   <h1 style="color:#660000;">FOOTPRINTING & NETWORK SCANNING PHASES</h1><p>
-     <h2 style="color:#660000;">W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS</h2>
-  </center>
-
-
+  # <sub> <p align="center">FOOTPRINTING & NETWORK SCANNING PHASES</p>
+    
 | Pentester Name<br>(Cybersecurity Professional) | Joel Koleosho |
 | :--- | :--- |
 | **Program/Batch** | B083-Networkwalks |
