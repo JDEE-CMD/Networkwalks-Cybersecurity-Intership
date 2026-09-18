@@ -88,7 +88,7 @@ Note: The actual subnet, number of hosts and addresses should be replaced with t
 <img width="979" height="641" alt="Result of the Scanning" src="https://github.com/user-attachments/assets/eb7e43f2-e2b6-46b2-9e63-a25b7c44362b" />
 
 **Display the topology of the Nmap Output**
-<img width="652" height="464" alt="VMB" src="https://github.com/user-attachments/assets/b132c9ef-9947-4525-a1e3-9b2d853fffc0" />
+<img width="1365" height="767" alt="Control" src="https://github.com/user-attachments/assets/4f797080-9593-43f8-8dfc-ad637555ba94" />
 
 <h2 style="color: #660000;">5. Risk Analysis / Impact</h2>
 
