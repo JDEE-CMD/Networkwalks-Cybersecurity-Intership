@@ -36,8 +36,8 @@ The table below lists each tool used in this report and its purpose.
 | Zenmap (Nmap GUI) | Scan the local subnet to find live hosts, IPs and MAC addresses. |
 | Windows CMD | Local IP and MAC address identification |
 
-#
-## 4.1 Footprinting & Reconnaissance
+# 4. Activities Performed
+# <sub> 4.1 Footprinting & Reconnaissance
 
 I performed reconnaissance against the networkwalks.com domain using six Kali Linux tools: WHOIS, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon. Each tool was used to collect a different type of information about the target.
 First, I used WHOIS to obtain publicly available domain registration information and identify the domain’s name servers. The results provided information about the domain registration and hosting infrastructure.
