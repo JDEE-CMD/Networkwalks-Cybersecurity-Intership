@@ -1,8 +1,8 @@
 # <p align="center">PENETRATION TESTING REPORT</p>
   <center>
-    FOOTPRINTING & NETWORK SCANNING PHASES
-    W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS
-    <center></center>
+   <h1 style="color:#660000;">FOOTPRINTING & NETWORK SCANNING PHASES</h1><p>
+     <h2 style="color:#660000;">W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS</h2>
+  </center>
 
 
 | Pentester Name<br>(Cybersecurity Professional) | Joel Koleosho |
