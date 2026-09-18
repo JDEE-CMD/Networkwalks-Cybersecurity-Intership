@@ -66,8 +66,8 @@ Finally, I used **DNSRecon** to enumerate DNS records. The results provided info
 <img width="1366" height="697" alt="dnsrecon " src="https://github.com/user-attachments/assets/9448c92d-0c6b-4246-92f7-b143e31b32cc" />
 
 # 4.2 Network Scanning with Zenmap
-For the second activity, I used Zenmap to perform network discovery on my local network. The practical required me to identify my local IP address and subnet, discover live hosts, identify their IP and MAC addresses, and generate a network topology.
-I first used the Windows ipconfig command to identify my local IP address and LAN subnet. I then entered the subnet into Zenmap and selected Ping Scan to identify active hosts.
+For the second activity, I used **Zenmap** to perform network discovery on my local network. The practical required me to identify my local IP address and subnet, discover live hosts, identify their IP and MAC addresses, and generate a network **topology.**
+I first used the Windows ipconfig command to identify my local IP address and LAN subnet. I then entered the subnet into Zenmap and selected **Ping Scan** to identify active hosts.
 The example results provided in the practical identified four live hosts:
 
   * 192.168.18.1
@@ -78,7 +78,17 @@ The example results provided in the practical identified four live hosts:
 The example results also included four MAC addresses.
 After completing the scan, I opened the Topology section in Zenmap, enabled the legend and saved the network topology in PDF format as required by the practical task.
 Note: The actual subnet, number of hosts and addresses should be replaced with the results from my own network when submitting the report.
-LAN Subnet scanning and Topology display
+
+# <sub> LAN Subnet scanning and Topology display as follows:
+
+  **Ping IPConfig on local CMD**
+<img width="1364" height="720" alt="Command Prompt" src="https://github.com/user-attachments/assets/a6d0ea7e-146f-4580-a372-777004fb83d6" />
+
+**Scan the LAN Subnet on Zenmap**
+<img width="979" height="641" alt="Result of the Scanning" src="https://github.com/user-attachments/assets/eb7e43f2-e2b6-46b2-9e63-a25b7c44362b" />
+
+**Display the topology of the Nmap Output**
+<img width="652" height="464" alt="VMB" src="https://github.com/user-attachments/assets/b132c9ef-9947-4525-a1e3-9b2d853fffc0" />
 
 <h2 style="color: #660000;">5. Risk Analysis / Impact</h2>
 
@@ -92,8 +102,8 @@ Based on the information collected during the footprinting and network scanning 
 | 4 | WAF technology identifiable | Wafw00f identified ModSecurity (SpiderLabs) | Reveals information about the web application's security architecture | 🟡 Low |
 | 5 | DNS infrastructure information exposed | DNSRecon identified DNS, mail and service-related records | DNS information can help build a broader infrastructure profile | 🟠 Medium |
 | 6 | Multiple live hosts visible on local network | Zenmap identified four live hosts in the example network | Unknown or unauthorized devices may potentially be present on a network | 🟠 Medium |
-
-# Risk level key:  **● Critical**  ● Medium  ● Low
+ 
+<h2 Risk level key:  **● Critical**  ● Medium  ● Low </h2>
 The risks above are observations from the footprinting and scanning exercises, not confirmed vulnerabilities.
 The practical exercises primarily involved information gathering and host discovery. No exploitation or vulnerability validation was performed as part of these two modules.
 Therefore, the presence of information such as a software version, IP address or DNS record does not by itself mean that the system is vulnerable. Further authorized security testing would be required to confirm any actual vulnerability.
@@ -142,7 +152,7 @@ Finally, I learned that reconnaissance and scanning must always be performed wit
 👤 Author
 Joel Koleosho
 Cybersecurity Intership B083
-LinkedIn:  
+LinkedIn:  www.linkedin.com/in/joel-koleosho
 ________________________________________
 📌 Project Information
 Program Name: Cybersecurity program at Networkwalks | Week: 02 | Repository: GitHub
