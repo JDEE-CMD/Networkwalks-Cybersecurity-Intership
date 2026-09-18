@@ -1,5 +1,4 @@
-<p align="center">
-  <h1 style="color: #660000;">PENETRATION TESTING REPORT</h1>
+<p align="center"> <h1 style="color: #660000;">PENETRATION TESTING REPORT</h1>
   <h3 style="color: #660000;">FOOTPRINTING & NETWORK SCANNING PHASES</h3>
   <p>W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS
 
@@ -103,7 +102,7 @@ Based on the information collected during the footprinting and network scanning 
 | 5 | DNS infrastructure information exposed | DNSRecon identified DNS, mail and service-related records | DNS information can help build a broader infrastructure profile | 🟠 Medium |
 | 6 | Multiple live hosts visible on local network | Zenmap identified four live hosts in the example network | Unknown or unauthorized devices may potentially be present on a network | 🟠 Medium |
  
-<h2 Risk level key:  **● Critical**  ● Medium  ● Low </h2>
+# <sub> Risk level key:  **● Critical**  ● Medium  ● Low
 The risks above are observations from the footprinting and scanning exercises, not confirmed vulnerabilities.
 The practical exercises primarily involved information gathering and host discovery. No exploitation or vulnerability validation was performed as part of these two modules.
 Therefore, the presence of information such as a software version, IP address or DNS record does not by itself mean that the system is vulnerable. Further authorized security testing would be required to confirm any actual vulnerability.
@@ -152,6 +151,7 @@ Finally, I learned that reconnaissance and scanning must always be performed wit
 👤 Author
 Joel Koleosho
 Cybersecurity Intership B083
+
 LinkedIn:  www.linkedin.com/in/joel-koleosho
 ________________________________________
 📌 Project Information
