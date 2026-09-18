@@ -162,4 +162,4 @@ LinkedIn: www.linkedin.com/in/joel-koleosho
 # Project Imformation
 
 **Program Name:** Cybersecurity at Networkwalks | **Week: 01 | Project:** Cybersecurity & Pentesting Lab Setup | 
-**Repository:** GitHub
+**Repository:** GitHub.
