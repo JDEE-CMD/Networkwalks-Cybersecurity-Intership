@@ -109,33 +109,32 @@ Therefore, the presence of information such as a software version, IP address or
    
 Based on the observations from these activities, I recommend the following security improvements:
 
-**1.	Review publicly exposed technology information**
-Organizations should regularly review what information about their web technologies, CMS and plugins is publicly visible.
+**1.	Review publicly exposed technology information:**
+  Organizations should regularly review what information about their web technologies, CMS and plugins is publicly visible.
 
-**2.	Keep software updated**
-CMS platforms, plugins and other web technologies should be regularly updated and reviewed against current security advisories.
+**2.	Keep software updated:**
+  CMS platforms, plugins and other web technologies should be regularly updated and reviewed against current security advisories.
 
-**3.	Review HTTP headers**
-HTTP response headers should be reviewed to determine whether unnecessary technical information is being exposed.
+**3.	Review HTTP headers:**
+  HTTP response headers should be reviewed to determine whether unnecessary technical information is being exposed.
 
 **4.	Review DNS records regularly**
 DNS records should be checked periodically to ensure that only required information and services are publicly exposed.
 
-**5.	Properly configure and monitor the WAF**
-Keep the WAF (ModSecurity) enabled and tuned, since it already blocks naive attacks.
+**5.	Properly configure and monitor the WAF:**
+  Keep the WAF (ModSecurity) enabled and tuned, since it already blocks naive attacks.
 
-**6.	Perform regular internal network discovery**
-Organizations should periodically scan their own networks to identify active devices.
+**6.	Perform regular internal network discovery:**
+  Organizations should periodically scan their own networks to identify active devices.
 
-**7.	Investigate unknown devices**
-Any unexpected device discovered during network scanning should be investigated and verified.
+**7.	Investigate unknown devices:**
+  Any unexpected device discovered during network scanning should be investigated and verified.
 
-**8.	Maintain network documentation**
-Network topology and device information should be documented and updated regularly.
+**8.	Maintain network documentation:**
+  Network topology and device information should be documented and updated regularly.
 
-**9.	Perform security testing with authorization**
-
-Reconnaissance and scanning should only be performed against systems and networks where appropriate authorization has been provided.
+**9.	Perform security testing with authorization:**
+  Reconnaissance and scanning should only be performed against systems and networks where appropriate authorization has been provided.
 
 # 7. Conclusion
 During Week 2 of my Cybersecurity & Ethical Hacking internship, I completed practical activities covering footprinting, reconnaissance and network scanning.
