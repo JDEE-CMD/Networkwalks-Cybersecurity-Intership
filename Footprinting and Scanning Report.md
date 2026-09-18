@@ -2,7 +2,7 @@
   <h1 style="color: #660000;">PENETRATION TESTING REPORT</h1>
   <h3 style="color: #660000;">FOOTPRINTING & NETWORK SCANNING PHASES</h3>
   <p>W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS
-  
+
 
 | Pentester Name<br>(Cybersecurity Professional) | Joel Koleosho |
 | :--- | :--- |
@@ -46,6 +46,7 @@ Using **Nslookup**, I resolved the domain name to its IP address. The provided r
 I used **Curl** with the -I option to inspect the HTTP response headers. This provided additional information about the web application and exposed the WordPress REST API endpoint /wp-json/.
 Next, I used **Wafw00f** to determine whether a Web Application Firewall was protecting the website. The result identified ModSecurity (SpiderLabs).
 Finally, I used **DNSRecon** to enumerate DNS records. The results provided information relating to name servers, mail servers, SPF/TXT records, service records and DNS software information.
+
 **1.	Whois result**
 <img width="1366" height="697" alt="Whois" src="https://github.com/user-attachments/assets/ef5bad96-3757-4b64-8b85-2713f4567a6a" />
 
@@ -68,6 +69,7 @@ Finally, I used **DNSRecon** to enumerate DNS records. The results provided info
 For the second activity, I used Zenmap to perform network discovery on my local network. The practical required me to identify my local IP address and subnet, discover live hosts, identify their IP and MAC addresses, and generate a network topology.
 I first used the Windows ipconfig command to identify my local IP address and LAN subnet. I then entered the subnet into Zenmap and selected Ping Scan to identify active hosts.
 The example results provided in the practical identified four live hosts:
+
   •	192.168.18.1
   •	192.168.18.2
   •	192.168.18.3
@@ -78,27 +80,20 @@ After completing the scan, I opened the Topology section in Zenmap, enabled the 
 Note: The actual subnet, number of hosts and addresses should be replaced with the results from my own network when submitting the report.
 LAN Subnet scanning and Topology display
 
- 
+<h2 style="color: #660000;">5. Risk Analysis / Impact</h2>
 
-
-
-
-
-
-
-
-
-5. Risk Analysis / Impact
 Based on the information collected during the footprinting and network scanning activities, I identified the following potential risks.
-#	Risk / Finding	Evidence / Observation	Potential Impact	Risk Level
-1	Web technology information exposed	WhatWeb identified WordPress and WP Download Manager	Attackers may use exposed technology/version information to identify software requiring further security review	● Medium
-2	Server IP address identifiable	Nslookup resolved the domain to 192.232.216.135	Provides information about the network location of the web service	● Low
-3	HTTP technical information exposed	Curl returned HTTP response headers and exposed /wp-json/	May assist technology fingerprinting and further enumeration	● Low
-4	WAF technology identifiable	Wafw00f identified ModSecurity (SpiderLabs)	Reveals information about the web application’s security architecture	● Low
-5	DNS infrastructure information exposed	DNSRecon identified DNS, mail and service-related records	DNS information can help build a broader infrastructure profile	● Medium
-6	Multiple live hosts visible on local network	Zenmap identified four live hosts in the example network	Unknown or unauthorized devices may potentially be present on a network	● Medium
 
-Risk level key:  ● Critical  ● Medium  ● Low
+| # | Risk / Finding | Evidence / Observation | Potential Impact | Risk Level |
+| :-: | :--- | :--- | :--- | :--- |
+| 1 | Web technology information exposed | WhatWeb identified WordPress and WP Download Manager | Attackers may use exposed technology/version information to identify software requiring further security review | 🟠 Medium |
+| 2 | Server IP address identifiable | Nslookup resolved the domain to 192.232.216.135 | Provides information about the network location of the web service | 🟡 Low |
+| 3 | HTTP technical information exposed | Curl returned HTTP response headers and exposed /wp-json/ | May assist technology fingerprinting and further enumeration | 🟡 Low |
+| 4 | WAF technology identifiable | Wafw00f identified ModSecurity (SpiderLabs) | Reveals information about the web application's security architecture | 🟡 Low |
+| 5 | DNS infrastructure information exposed | DNSRecon identified DNS, mail and service-related records | DNS information can help build a broader infrastructure profile | 🟠 Medium |
+| 6 | Multiple live hosts visible on local network | Zenmap identified four live hosts in the example network | Unknown or unauthorized devices may potentially be present on a network | 🟠 Medium |
+
+# Risk level key:  **● Critical**  ● Medium  ● Low
 The risks above are observations from the footprinting and scanning exercises, not confirmed vulnerabilities.
 The practical exercises primarily involved information gathering and host discovery. No exploitation or vulnerability validation was performed as part of these two modules.
 Therefore, the presence of information such as a software version, IP address or DNS record does not by itself mean that the system is vulnerable. Further authorized security testing would be required to confirm any actual vulnerability.
