@@ -70,10 +70,10 @@ For the second activity, I used Zenmap to perform network discovery on my local 
 I first used the Windows ipconfig command to identify my local IP address and LAN subnet. I then entered the subnet into Zenmap and selected Ping Scan to identify active hosts.
 The example results provided in the practical identified four live hosts:
 
-  •	192.168.18.1
-  •	192.168.18.2
-  •	192.168.18.3
-  •	192.168.18.4
+  * 192.168.18.1
+  * 192.168.18.2
+  * 192.168.18.3
+  * 192.168.18.4
   
 The example results also included four MAC addresses.
 After completing the scan, I opened the Topology section in Zenmap, enabled the legend and saved the network topology in PDF format as required by the practical task.
@@ -98,28 +98,38 @@ The risks above are observations from the footprinting and scanning exercises, n
 The practical exercises primarily involved information gathering and host discovery. No exploitation or vulnerability validation was performed as part of these two modules.
 Therefore, the presence of information such as a software version, IP address or DNS record does not by itself mean that the system is vulnerable. Further authorized security testing would be required to confirm any actual vulnerability.
 
-6. Recommendations
+# 6. Recommendations
+   
 Based on the observations from these activities, I recommend the following security improvements:
+
 1.	Review publicly exposed technology information
 Organizations should regularly review what information about their web technologies, CMS and plugins is publicly visible.
+
 2.	Keep software updated
 CMS platforms, plugins and other web technologies should be regularly updated and reviewed against current security advisories.
+
 3.	Review HTTP headers
 HTTP response headers should be reviewed to determine whether unnecessary technical information is being exposed.
+
 4.	Review DNS records regularly
 DNS records should be checked periodically to ensure that only required information and services are publicly exposed.
+
 5.	Properly configure and monitor the WAF
 Keep the WAF (ModSecurity) enabled and tuned, since it already blocks naive attacks.
+
 6.	Perform regular internal network discovery
 Organizations should periodically scan their own networks to identify active devices.
+
 7.	Investigate unknown devices
 Any unexpected device discovered during network scanning should be investigated and verified.
+
 8.	Maintain network documentation
 Network topology and device information should be documented and updated regularly.
+
 9.	Perform security testing with authorization
 Reconnaissance and scanning should only be performed against systems and networks where appropriate authorization has been provided.
 
-7. Conclusion
+# 7. Conclusion
 During Week 2 of my Cybersecurity & Ethical Hacking internship, I completed practical activities covering footprinting, reconnaissance and network scanning.
 In the footprinting activity, I used six Kali Linux tools to collect information about the target domain. I learned how WHOIS can provide domain information, WhatWeb can identify web technologies, Nslookup can resolve domain names, Curl can inspect HTTP headers, Wafw00f can identify a WAF, and DNSRecon can provide additional DNS information.
 In the network scanning activity, I used Zenmap to identify my local network configuration and discover active hosts. I also collected IP and MAC address information and created a network topology.
@@ -128,7 +138,6 @@ I also learned that technical findings should be documented clearly. A good cybe
 Finally, I learned that reconnaissance and scanning must always be performed within an authorized scope. These activities were completed as part of the assigned educational cybersecurity lab.
 
 -End-
-
 
 👤 Author
 Joel Koleosho
