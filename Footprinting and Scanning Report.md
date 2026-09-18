@@ -4,7 +4,7 @@
   <p>W2-PM-FINAL | CYBERSECURITY | NETWORKWALKS
   </p>
 
-| Pentester Name<br>(Cybersecurity Professional) | Joel Koleosho |
+<p align="center">| Pentester Name<br>(Cybersecurity Professional) | Joel Koleosho |
 | :--- | :--- |
 | **Program/Batch** | B083-Networkwalks |
 | **Date** | 18 September, 2026 |
