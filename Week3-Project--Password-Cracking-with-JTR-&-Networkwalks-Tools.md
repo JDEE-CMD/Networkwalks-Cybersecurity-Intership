@@ -89,6 +89,8 @@ protection.
 <img width="815" height="578" alt="PDF3 Unlocked" src="https://github.com/user-attachments/assets/79de7875-2cb6-4f53-b8a4-1fb6e45a2a7d" />
 
 
+
+
 <p align="center">
  <img width="679" height="326" alt="HS" src="https://github.com/user-attachments/assets/08abe5cf-116b-4e84-be13-5dec0f840dc6" />
 </p>
@@ -149,9 +151,19 @@ It is going to display the cracked password on the screen
 
 
 ##### 2. Copy the Output and use it to open the locked PDF files.
-It is going to give you the same resulf after unlocked, just as the JTR
+It is going to give you the same resulf after unlocked, just as the JTR.
 <img width="1140" height="549" alt="pdf1 " src="https://github.com/user-attachments/assets/911ca53d-d18c-4f75-a291-699d37f77395" />
 
+# What I learned
+##### 1. John the Ripper:
+* I learned what JRT is all about.
+* Also learnt how to use it to cracked password
+
+##### 2. Networkwalks Tools
+* I learnt how the Networkwalks Hash Calculator works and how to use it.
+* I also learnt how to use Networkwalks Password Cracker to crack locked PDF files.
+
+##### 3. I learnt that very simple passwords are very easy to cracked
 
 
 
