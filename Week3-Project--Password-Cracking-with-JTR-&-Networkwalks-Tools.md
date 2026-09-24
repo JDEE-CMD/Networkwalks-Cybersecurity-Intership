@@ -18,3 +18,12 @@ In this lab task you will use JTR John and JTR Johnny to recover the password of
 exercise helps you learn how password cracking works and why it is important to use strong passwords for
 protection.
 
+# <sub> Objectives
+  * Installation of John the Ripper
+  * Extraction of Hash ID of locked/proteced files
+  * Cracking the locked filed password
+
+# Procedures
+<sub> * Download John the Ripper from their officialwebsite
+
+
