@@ -79,6 +79,7 @@ protection.
 <img width="1344" height="645" alt="PDF1 UNLOCKED" src="https://github.com/user-attachments/assets/2ab7e85a-da4c-4fd0-9b2a-a87761d9f46e" />
 
 **img4: PDF2 Unlocked**
+
 <img width="574" height="558" alt="PDF2 Unlocked" src="https://github.com/user-attachments/assets/20451b6c-43b4-4712-a76b-6d379617d549" />
 
 **img5: PDF3 Unique Password**
@@ -87,6 +88,68 @@ protection.
 **img6: PDF3 Unlocked**
 <img width="815" height="578" alt="PDF3 Unlocked" src="https://github.com/user-attachments/assets/79de7875-2cb6-4f53-b8a4-1fb6e45a2a7d" />
 
+<p align="center">
+  <img width="602" height="233" alt="nw" src="https://github.com/user-attachments/assets/5f973ff6-44db-493f-b65b-8d38edc544e2" />
+</p>
+# <h1 align="center"> PASSWORD CRACKING WITH NETWORKWALKS TOOLS </h1>
+
+## Overview
+Password cracking is the process of recovering a password from stored data or a protected file. Security
+professionals use it to test how strong a password is and to show why weak passwords are risky. If a
+password is short or common, it can be found quickly, which proves the need for strong passwords.
+
+Many files like PDF, ZIP, and Office documents can be locked with a password. When a file is locked, its
+password is stored in the form of a hash. A hash is a scrambled value that represents the password. To
+recover the password, we first take out this hash from the file, and then run it through a cracking tool that
+tries different words until it finds a match.
+
+In this lab you will use two free online tools made by Networkwalks. First you will use the Hash Calculator
+to take the hash out of a locked PDF file. Then you will use the Password Cracker to find the real password
+from that hash. Both tools run in your web browser, so you do not need to install anything.
+
+This lab helps you understand how password cracking works step by step and why strong passwords are
+important for protection.
+
+
+## Objectives
+  * Extraction of Hash ID of locked/proteced files using Networkwalks Hash Calculator
+  * Cracking the locked filed password using Networkwalks Password Cracker
+
+## Tools Used
+| S/N | Tool | Function |
+|-----|------|----------|
+| 1   | Networkwalks Hash Calculator | It is web based software that can work on any laptop to extract Hash ID. It is easy to use.  |
+| 2   | Networkwalks Password Cracker | It is also a web based software which is use to crack hasd ID and generate the real password |
+| 3   | Passworded/Encrypted PDF files; 1-3 files | These are protected files that were cracked |
+
+## Procedures
+##### 1. Open Networkwalks Hash Calculator in the web browser
+Click this link https://networkwalks.com/hash-calculator/ to open **Networkwalks Hash Calculator**
+
+<img width="1124" height="605" alt="Networkwalks Hash Calculator" src="https://github.com/user-attachments/assets/4857cb10-3262-4850-86fe-e94e80ea885f" />
+
+##### 2. Locate the locked PDF file and upload it
+<img width="1174" height="574" alt="nw2" src="https://github.com/user-attachments/assets/d4e47683-3ddd-4c1b-9426-8b47fbf4e2a0" />
+
+##### 3. Copy the Hasd ID value starting from $pdf$.
+<img width="918" height="513" alt="copy" src="https://github.com/user-attachments/assets/2f9b4fc2-bf7b-41e7-b37e-fe10b15b7311" />
+
+##### 4. Open Networkwalks Password Cracker in the web browser
+Click the this link https://networkwalks.com/password-cracker/ to open Networkwalks Password Cracker
+<img width="1083" height="567" alt="Networkwalks Password cracker" src="https://github.com/user-attachments/assets/d987b175-74ce-408f-a0e9-4bb892fbca55" />
+
+##### 5. Paste the Hasd ID value into Networkwalks Password Cracker and start cracking. 
+It will try different passwords untill it finds a match.
+<img width="931" height="573" alt="nw3" src="https://github.com/user-attachments/assets/d0f0dc71-2fc7-4d03-9da0-ed09972c7c7d" />
+
+##### 6. Be patient for the tool to finish.
+It is going to display the cracked password on the screen
+<img width="1134" height="607" alt="PDF1 pwd unlocked by NetPwdCracker" src="https://github.com/user-attachments/assets/8519c102-fbf7-4a15-96b3-4019770ba0cb" />
+
+
+##### 2. Copy the Output and use it to open the locked PDF files.
+It is going to give you the same resulf after unlocked, just as the JTR
+<img width="1140" height="549" alt="pdf1 " src="https://github.com/user-attachments/assets/911ca53d-d18c-4f75-a291-699d37f77395" />
 
 
 
