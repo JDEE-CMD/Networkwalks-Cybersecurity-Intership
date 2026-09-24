@@ -88,9 +88,11 @@ protection.
 **img6: PDF3 Unlocked**
 <img width="815" height="578" alt="PDF3 Unlocked" src="https://github.com/user-attachments/assets/79de7875-2cb6-4f53-b8a4-1fb6e45a2a7d" />
 
+
 <p align="center">
-  <img width="602" height="233" alt="nw" src="https://github.com/user-attachments/assets/5f973ff6-44db-493f-b65b-8d38edc544e2" />
+ <img width="679" height="326" alt="HS" src="https://github.com/user-attachments/assets/08abe5cf-116b-4e84-be13-5dec0f840dc6" />
 </p>
+
 # <h1 align="center"> PASSWORD CRACKING WITH NETWORKWALKS TOOLS </h1>
 
 ## Overview
@@ -109,7 +111,6 @@ from that hash. Both tools run in your web browser, so you do not need to instal
 
 This lab helps you understand how password cracking works step by step and why strong passwords are
 important for protection.
-
 
 ## Objectives
   * Extraction of Hash ID of locked/proteced files using Networkwalks Hash Calculator
