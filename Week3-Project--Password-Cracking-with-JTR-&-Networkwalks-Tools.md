@@ -165,6 +165,16 @@ It is going to give you the same resulf after unlocked, just as the JTR.
 
 ##### 3. I learnt that very simple passwords are very easy to cracked
 
+# 👤 Author
+**Joel Koleosho**
+Cybersecurity Starter
+
+LinkedIn: www.linkedin.com/in/joel-koleosho
+
+# Project Imformation
+
+**Program Name:** Cybersecurity at Networkwalks | **Week: 01 | Project:** Cybersecurity & Pentesting Lab Setup | 
+**Repository:** GitHub.
 
 
 
