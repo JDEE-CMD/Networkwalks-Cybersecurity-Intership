@@ -165,6 +165,7 @@ It is going to give you the same resulf after unlocked, just as the JTR.
   * I learnt how the Networkwalks Hash Calculator works and how to use it.<br>
   * I also learnt how to use Networkwalks Password Cracker to crack locked PDF files.<br>
 </p>
+
 ##### 3. I learnt that very simple passwords are very easy to cracked
 
 
