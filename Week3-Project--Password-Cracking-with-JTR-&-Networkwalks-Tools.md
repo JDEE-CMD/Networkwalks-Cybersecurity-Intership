@@ -26,7 +26,7 @@ protection.
 # Tools Used
 | S/N | Tool | Function |
 |-----|------|----------|
-| 1   | John the Ripper | It is the main tool and serves as where John.exe can selected for Johnny |
+| 1   | John the Ripper | It is the main tool and serves as where **John.exe** can be selected for Johnny to be functional |
 | 2   | Johnny GUI | It is a graphical version of JTR that can be use without writing any code |
 | 3   | Online Hash ID Cracker | It is used to extract Hash ID file that Johnny will crack to extract real password |
 | 4   | Passworded/Encrypted PDF files; 1-3 files | These are protected files that were cracked |
