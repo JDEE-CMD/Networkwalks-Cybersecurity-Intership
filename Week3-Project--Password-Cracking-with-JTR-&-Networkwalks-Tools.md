@@ -58,6 +58,37 @@ protection.
 <img width="961" height="381" alt="Aft" src="https://github.com/user-attachments/assets/2bbd7b71-0c13-42c5-b001-3da494dba61b" />
 
 ### <sub> Step 3.
-##### 1. Open OnlineHashcrack.com
+##### 1. Open OnlineHashcrack.com, click browse to select your protected pdf files and upload.
+<img width="1089" height="518" alt="Upload the protected pdf" src="https://github.com/user-attachments/assets/e336a71d-98e6-457f-b000-ce86645d1478" />
+
+##### 2. Copy the Output and save it as txt file
+<img width="1147" height="517" alt="copy the hash ID" src="https://github.com/user-attachments/assets/626b6647-7435-44de-9b28-ae5174582975" />
+
+##### 3. Add Password file **(Hash ID)** saved as txt file
+<img width="871" height="546" alt="add passfile" src="https://github.com/user-attachments/assets/cd1570f4-9254-4a96-befd-5f215354c6ac" />
+
+##### 4. Click on Start new attack to generate the real password and copy it to open the protected pdf files as shown below.
+
+**img1: Password generated** 
+<img width="896" height="586" alt="Add password file" src="https://github.com/user-attachments/assets/e974f075-930c-4a23-a08f-7d131af153b2" />
+
+**img2: Open the locked PDF and paste the copied password**
+<img width="1140" height="549" alt="pdf1 " src="https://github.com/user-attachments/assets/857c5862-8c44-4917-bc79-c0745dc6342f" />
+
+**img3: The PDF1 Unlocked**
+<img width="1344" height="645" alt="PDF1 UNLOCKED" src="https://github.com/user-attachments/assets/2ab7e85a-da4c-4fd0-9b2a-a87761d9f46e" />
+
+**img4: PDF2 Unlocked**
+<img width="574" height="558" alt="PDF2 Unlocked" src="https://github.com/user-attachments/assets/20451b6c-43b4-4712-a76b-6d379617d549" />
+
+**img5: PDF3 Unique Password**
+<img width="868" height="401" alt="PDF3 PASSWORD" src="https://github.com/user-attachments/assets/d9aaa3c1-4db0-4b61-903e-1e4027417158" />
+
+**img6: PDF3 Unlocked**
+<img width="815" height="578" alt="PDF3 Unlocked" src="https://github.com/user-attachments/assets/79de7875-2cb6-4f53-b8a4-1fb6e45a2a7d" />
+
+
+
+
 
 
