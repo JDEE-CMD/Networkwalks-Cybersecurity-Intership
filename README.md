@@ -1,0 +1,213 @@
+# Penetration Testing & Vulnerability Assessment
+
+## MEDIROZA GENERAL HOSPITAL
+
+NETWORKWALKS  |  BATCH B083  |  WEEK 4
+
+Target: https://medirozahospital.com
+
+Engagement: Black-box web application assessment | Brief duration: five days
+
+Report date: 08 October 2026
+
+Prepared by: [Tester name]  |  Instructor: [Instructor name]
+
+Classification: CONFIDENTIAL — CLIENT / INSTRUCTOR ONLY
+
+Evidence: 29 screenshots, original and decrypted PDF reports, SQL backup, and assignment brief supplied by the tester. This document is an evidence-based assessment; no independent live retest was performed.
+
+## 1. Executive Summary
+
+The engagement examined the public Mediroza General Hospital web application and associated document handling. Supplied screenshots show a patient login page, database error messages, a session displaying three encrypted pathology reports, and subsequent recovery of the three documents. The most significant confirmed security issue is an SQL backup exposed through the public /old/ directory. A normal HTTPS download returned HTTP 200 OK and 6,346 bytes. The provided backup contains 30 staff records and 10 shareholder records, including salary, contact, national-identification and ownership fields.
+
+A recovered PDF contained an internal metadata comment identifying /old as a backup location. The public directory index then displayed the SQL backup filename. This forms a coherent evidence chain from document metadata to a confirmed sensitive-data disclosure. The screenshots also demonstrate a verbose MySQL error and differing login responses; neither alone establishes successful SQL injection or account enumeration at scale.
+
+| Indicator | Result |
+| --- | --- |
+| Overall assessed risk | CRITICAL — public access to sensitive database backup |
+| M1 | Patient portal and three encrypted reports shown; exact initial access technique not fully evidenced |
+| M2 | Three unlocked report files and password recovery outcomes evidenced |
+| M3 | Database backup downloaded; 30 staff and 10 shareholder records confirmed |
+| Primary corrective action | Remove and block all public backup files immediately |
+
+## 2. Engagement Scope and Rules
+
+The supplied Networkwalks assignment describes a five-day authorized black-box penetration test restricted to medirozahospital.com. It prohibits social engineering, denial-of-service testing and activity outside the agreed target. The brief states that written authorization was granted; a separately signed authorization document was not supplied for independent verification.
+
+Methodology represented in the evidence: web reconnaissance and robots.txt inspection; login-response observation; browsing an authenticated patient portal; retrieval of encrypted PDF reports; local PDF hash analysis and wordlist-based password recovery; PDF metadata inspection with ExifTool; discovery of an indexed legacy directory; HTTPS retrieval of an SQL backup; and local, read-only review of its table definitions and records.
+
+Tools shown: browser, Kali Linux terminal, curl, wget, grep, ExifTool 12.67, qpdf, and Networkwalks hash calculator/password cracker. The earlier exercise also discussed whois, whatweb, nslookup, wafw00f, dnsrecon and gobuster; full outputs are not included among the current screenshots.
+
+## 3. Milestone Assessment
+
+| Milestone | Objective | Observed outcome |
+| --- | --- | --- |
+| M1 — Initial Access | Retrieve three confidential patient PDF lab reports | Portal lists three encrypted reports; downloaded PDF files are shown. Initial access mechanism is not fully established by screenshots. |
+| M2 — PDF Recovery | Recover contents of all three encrypted PDFs | Screenshots show hash extraction, password matches, decrypted files and readable report pages. |
+| M3 — Data Exposure | Identify staff salaries and shareholder details | SQL file and download evidence confirm the data categories and record counts. |
+| M4 — Reporting | Professional assessment report | This document, with findings, risk register, evidence and remediation. |
+
+## 4. Technical Findings and Evidence
+
+### F-01 — Publicly Accessible SQL Database Backup | CRITICAL
+
+Evidence: the /old/ directory index listed mediroza_db_backup_2019.sql. The supplied wget screenshot shows an HTTPS response of 200 OK, content type text/x-sql and a completed 6,346-byte transfer. The SQL file header identifies an internal mediroza_hr database backup. The staff table contains 30 rows; the shareholders table contains 10 rows and 1,000,000 total shares.
+
+Impact: disclosure of employee names, roles, contact details, national identifiers, monthly salary fields and shareholder information to anyone able to retrieve the file. The SQL header labels the backup as confidential. The backup date in its header is 2019-08-27; some staff rows contain later joining dates, so the dataset chronology is internally inconsistent and should not be treated as a reliable historical snapshot without client confirmation.
+
+Remediation: immediately remove or deny access to the file and all backups under web-accessible directories; move encrypted backups to private storage; inspect access logs, assess data-breach obligations and any credentials in other copies, and validate that direct URL access is blocked.
+
+<p align="center"><img src="images/figure-01.png" alt="Report screenshot 1" width="800"></p>
+
+*Figure 1. Successful download of the SQL backup (HTTP 200 OK, 6,346 bytes).*
+
+### F-02 — Legacy Directory Indexing | MEDIUM
+
+Evidence: the /old/ index screenshot exposes the SQL backup filename. Indexing aided discovery; disabling indexing alone would not prevent direct retrieval of a known filename. Remediation: disable autoindexing, remove legacy material and deny direct access to backup extensions.
+
+<p align="center"><img src="images/figure-02.png" alt="Report screenshot 2" width="800"></p>
+
+*Figure 2. Public /old/ directory index listing a database backup.*
+
+### F-03 — Operational Metadata Disclosure | LOW
+
+Evidence: ExifTool metadata for report3_open.pdf includes the comment “DB backup moved to /old before site migration, do not delete”, with author j.malik and creator Mediroza CMS 1.4.2. This comment points to an internal storage location. Remediation: remove operational comments from exported documents and implement automated metadata review; do not rely on metadata cleaning to secure backups.
+
+<p align="center"><img src="images/figure-03.png" alt="Report screenshot 3" width="800"></p>
+
+*Figure 3. ExifTool output showing the internal /old backup-location comment.*
+
+### F-04 — Verbose Database Error Disclosure | MEDIUM
+
+Evidence: a patient login screenshot displays a raw mysqli_query() warning and MySQL syntax-error text. This reveals implementation details and may indicate insufficient input handling. The image does not, on its own, demonstrate successful SQL injection, database modification, or authentication bypass. Remediation: parameterize all database queries, validate input, suppress raw database errors from users and log technical details server-side.
+
+<p align="center"><img src="images/figure-04.png" alt="Report screenshot 4" width="800"></p>
+
+*Figure 4. Patient login displaying a raw MySQL syntax error.*
+
+### F-05 — Distinguishable Authentication Responses | LOW / VALIDATION REQUIRED
+
+Evidence: screenshots show “Username not found” and “Incorrect password” as distinct login outcomes. These responses may allow username enumeration if they correspond consistently to account existence; the screenshots do not establish repeatability or scale. Remediation: use a generic authentication failure message, monitor failed attempts and apply rate limits.
+
+<p align="center"><img src="images/figure-05.png" alt="Report screenshot 5" width="800"></p>
+
+*Figure 5. Authentication response disclosing “Username not found”.*
+
+### F-06 — Recoverable Password Protection on Patient PDFs | HIGH (DOCUMENT CONFIDENTIALITY)
+
+Evidence: all three encrypted PDFs were processed with a hash calculator and dictionary attack interface. Screenshots show recovered passwords and readable decrypted pathology reports. This establishes that the supplied PDF passwords were recoverable using the demonstrated wordlists, but does not establish that all hospital documents use similarly weak passwords. Remediation: use long, unique randomly generated passwords per document; distribute secrets through a separate authenticated channel; prioritize robust portal authorization and encryption at rest over PDF passwords alone.
+
+<p align="center"><img src="images/figure-06.png" alt="Report screenshot 6" width="800"></p>
+
+*Figure 6. Initial dictionary attack on the third PDF exhausted its wordlist.*
+
+<p align="center"><img src="images/figure-07.png" alt="Report screenshot 7" width="800"></p>
+
+*Figure 7. A larger wordlist was selected for continued password recovery; recovered secret values are omitted.*
+
+### F-07 — Confidential Data Disclosure (Impact of F-01) | HIGH IMPACT
+
+The SQL file contains staff and shareholder INSERT statements. Confirmed data categories include 30 staff rows with monthly_salary_zar, national_id, phone and email, plus 10 shareholder rows with share_percent, shares_held and share_class. These are consequences of the exposed backup, not an independent entry-point flaw. Individual names, salaries, national IDs and patient clinical details are intentionally excluded from this report.
+
+<p align="center"><img src="images/figure-08.png" alt="Report screenshot 8" width="800"></p>
+
+*Figure 8. Local inspection identifies staff and shareholders table definitions.*
+
+## 5. Evidence of M1 and M2 Outcomes
+
+The patient portal screenshot shows three encrypted pathology report download entries. A local file-manager screenshot shows all three original PDFs and decrypted output files. The screenshots also show a qpdf decryption command, ExifTool metadata inspection, and the three readable PDF report pages. Because the screenshots contain patient health information, this report does not reproduce the full report pages; originals should be retained only in a controlled confidential evidence archive.
+
+<p align="center"><img src="images/figure-09.png" alt="Report screenshot 9" width="800"></p>
+
+*Figure 9. Patient portal listing three encrypted pathology PDF reports.*
+
+<p align="center"><img src="images/figure-10.png" alt="Report screenshot 10" width="800"></p>
+
+*Figure 10. Local copies of the three encrypted patient reports.*
+
+<p align="center"><img src="images/figure-11.png" alt="Report screenshot 11" width="800"></p>
+
+*Figure 11. qpdf decryption command and ExifTool metadata for the first recovered PDF.*
+
+## 6. Risk Register
+
+| ID | Finding | Severity | Confidence |
+| --- | --- | --- | --- |
+| F-01 | Publicly downloadable SQL backup | Critical | Confirmed |
+| F-02 | Legacy directory indexing | Medium | Confirmed |
+| F-03 | Internal metadata comment | Low | Confirmed |
+| F-04 | Verbose SQL error disclosure | Medium | Confirmed error; exploit unproven |
+| F-05 | Distinct login errors | Low | Observed; enumeration unproven |
+| F-06 | Recoverable PDF passwords | High | Confirmed for three files |
+| F-07 | Staff/shareholder data disclosure | High impact | Confirmed; consequence of F-01 |
+
+Severity levels are qualitative and not CVSS scores. The “critical” assessment reflects unauthenticated retrieval of sensitive records; legal, financial and operational consequences require client validation.
+
+## 7. Recommendations and Remediation
+
+| Priority | Action | Success criterion |
+| --- | --- | --- |
+| Immediate | Remove SQL backup and block backup extensions at web server | Unauthenticated direct request cannot retrieve backup |
+| Immediate | Preserve logs and investigate exposure window and downstream access | Incident timeline and impact assessment completed |
+| High | Move backups outside web root, encrypt and restrict them | Access review and restore test pass |
+| High | Harden patient portal authentication and document authorization | Unauthorized users cannot list/download reports |
+| High | Use parameterized queries and generic error messages | No raw SQL errors; negative login tests behave consistently |
+| High | Strengthen document passwords and delivery process | Independent review confirms strong unique secrets |
+| Medium | Disable directory indexing and audit old/migration paths | No directory index or sensitive legacy files exposed |
+| Medium | Strip sensitive metadata from published PDFs | Metadata checks pass in release workflow |
+
+## 8. Conclusion
+
+The supplied evidence establishes a critical web-accessible database backup containing sensitive staff and shareholder records. Metadata disclosure and legacy directory indexing helped expose the backup location. Three patient PDFs were recovered and read during the exercise, and the login interface exposed technical database errors. The highest-priority response is immediate removal and access restriction of backups, followed by an incident review, hardening of document and login workflows, and authorized retesting of each fix.
+
+# PDF Password-Recovery Evidence — Screenshot Appendix
+
+The following screenshots were supplied by the tester and document the password-recovery and successful opening of the three protected patient reports. They are included as confidential evidence. Passwords and patient details visible in the screenshots must not be published in a public repository.
+
+### PDF 1 — Password recovery confirmed
+
+<p align="center"><img src="images/figure-12.png" alt="Report screenshot 12" width="800"></p>
+
+*Source screenshot: pdf1 cracked.png*
+
+### PDF 1 — Decrypted report opened
+
+<p align="center"><img src="images/figure-13.png" alt="Report screenshot 13" width="800"></p>
+
+*Source screenshot: pdf1 unlocked.png*
+
+### PDF 2 — Password recovery confirmed
+
+<p align="center"><img src="images/figure-14.png" alt="Report screenshot 14" width="800"></p>
+
+*Source screenshot: pdf2 cracked.png*
+
+### PDF 2 — Decrypted report opened
+
+<p align="center"><img src="images/figure-15.png" alt="Report screenshot 15" width="800"></p>
+
+*Source screenshot: pdf2 unlocked.png*
+
+### PDF 3 — PDF hash identified
+
+<p align="center"><img src="images/figure-16.png" alt="Report screenshot 16" width="800"></p>
+
+*Source screenshot: pdf3 hash id.png*
+
+### PDF 3 — Initial wordlist exhausted
+
+<p align="center"><img src="images/figure-17.png" alt="Report screenshot 17" width="800"></p>
+
+*Source screenshot: pdf3 required largerwordlist file.png*
+
+### PDF 3 — Password recovery confirmed
+
+<p align="center"><img src="images/figure-18.png" alt="Report screenshot 18" width="800"></p>
+
+*Source screenshot: pdf3 cracked.png*
+
+### PDF 3 — Decrypted report opened
+
+<p align="center"><img src="images/figure-19.png" alt="Report screenshot 19" width="800"></p>
+
+*Source screenshot: pdf3 unlocked.png*
